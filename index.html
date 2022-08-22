@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,17 +12,24 @@
         
   </head>
   <body>
-    <main>
-      <div class="main-container">
+    <main class="main-container">
         <div class="image-side">
-          <img class="image" src="images/image-product-desktop.jpg">
+          <img class="image-mobile" src="images/image-product-mobile.jpg">
+          <img class="image-desktop" src="images/image-product-desktop.jpg">
         </div>
         
         <div class="text-side">
           <div class="item-type">PERFUME</div>
-          <div class="item-name">Gabrielle <br> Essense Eau <br> De Parfum</div>
-          <div class="item-description">
+          <div class="item-name-mobile">Gabrielle Essense <br> Eau De Parfum</div>
+          <div class="item-name-desktop">Gabrielle <br>  Essense Eau<br>  De Parfum</div>
+          <div class="item-description-mobile">
             A floral, solar and voluptuous <br>
+            interpretation composed by Olivier  <br>
+            Polge, Perfumer-Creator for the house of <br>
+            CHANEL.
+          </div>
+          <div class="item-description-desktop">
+            A floral, solar and voluptuous<br> 
             interpretation composed by <br>
             Olivier Polge, Perfumer-Creator <br>
             for the house of CHANEL.
@@ -37,14 +45,12 @@
           </div>
           
           <button class ="cart">
-            <img src="images/icon-cart.svg">
+            <img class="cart-image" src="images/icon-cart.svg">
             <div class="cart-text">
               Add to Cart
             </div>
           </button>
         </div>
-
-      </div>
 
     </main>
     

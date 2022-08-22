@@ -1,92 +1,205 @@
-body,
-html{
-  background-color: hsl(30, 38%, 92%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+* {
+  margin: 0;
+  padding: 0;
+}
 
+html,
+body{
+  height: 100%;
+  background-color: hsl(30, 38%, 92%);
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-container{
-  border-radius: 10px;
   display: flex;
-  height: 400px;
+  flex-direction: column;
+  width:100%;
 }
 
+.image-side{
+  background-color: white;
 
+}
 
-.image{
-  height: 100%;
+.image-mobile{
+  width: 100%;
   border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.image-desktop{
+  display: none;
 }
 
 .text-side{
-  padding-left: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background-color: hsl(0, 0%, 100%);
-  border-top-right-radius: 10px;
+  background-color: white;
+  padding: 1.2rem 1.2rem;
+  border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
 .item-type{
   font-family: Montserrat;
   color: hsl(228, 12%, 48%);
-  font-size: 12px;
-  letter-spacing:4px;
- 
-
+  font-size: 0.7rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: 8px;
 }
 
-.item-name{
+.item-name-mobile{
   font-family: Fraunces;
-  font-size: 27px;
-  
+  font-size: 1.8em;
+  line-height: 1.8rem;
+  margin-bottom: 12px;
+  color: hsl(212, 21%, 14%);
 }
 
-.item-description{
-  font-size: 14px;
+.item-name-desktop{
+  display: none;
+}
+
+.item-description-mobile{
   font-family: Montserrat;
   color: hsl(228, 12%, 48%);
-  white-space: nowrap;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+.item-description-desktop{
+  display: none;
 }
 
 .item-price{
-  align-items: center;
   display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .item-final-price{
-  font-size: 20px;
   font-family: Fraunces;
-  color: hsl(158, 36%, 37%);
+  font-size: 1.8em;
   margin-right: 10px;
+  color: hsl(158, 36%, 37%);
 }
 
 .item-original-price{
-  text-decoration: line-through;
   font-family: Montserrat;
-  font-size: 10px;
-  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+  font-size: 0.8rem;
 }
 
-.cart{
-  justify-content: center;
-  align-items: center;
+button{
+  font-size: 15px;
   display: flex;
+  padding: 1em 1em;
   background-color: hsl(158, 36%, 37%);
   color: white;
-  padding: 10px;
-  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5em;
   border: none;
+  cursor: pointer;
 }
 
-.cart-text{
-  margin-left: 10px;
+.cart:active{
+  background-color: hsl(158, 36%, 25%) ;
+
 }
+
+.cart-image{
+  margin-right: 10px;
+}
+
+@media only screen and (min-width:768px){
+  .main-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .image-side{
+    width: 50%;
+  }
+
+
+  .image-desktop{
+    display: block;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  .image-mobile{
+    display: none;
+  }
+
+  .item-name-desktop{
+    display: block;
+    font-family: Fraunces;
+    font-size: 2.8rem;
+    line-height: 2.5rem;
+    margin-bottom: 20px;
+    color: hsl(212, 21%, 14%);
+  }
+
+  .item-name-mobile{
+    display: none;
+  }
+
+  .item-type{
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .item-description-mobile{
+    display: none;
+  }
+
+  .item-description-desktop{
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-family: Montserrat;
+    color: hsl(228, 12%, 48%);
+  }
+  
+  .item-price{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .item-final-price{
+    font-family: Fraunces;
+    font-size: 2.8em;
+    margin-right: 10px;
+  }
+  
+  .item-original-price{
+    font-family: Montserrat;
+    text-decoration: line-through;
+    font-size: 1rem;
+  }
+
+  .text-side{
+    width: 50%;
+    justify-content: space-between;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  
+  
+
+}
+
+
+
+
+
+
